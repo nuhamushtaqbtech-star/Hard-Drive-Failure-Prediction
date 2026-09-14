@@ -1,4 +1,4 @@
-💾 Hard Drive Failure Prediction
+#💾 Hard Drive Failure Prediction
 
 A machine learning system that predicts hard drive failures up to 7 days in advance using real-world sensor data from the Backblaze Data Center.
 
@@ -6,7 +6,7 @@ The goal is to identify drives at risk of failure early enough to enable proacti
 
 ---
 
-📌 Problem Statement
+##📌 Problem Statement
 
 Unexpected hard drive failures can lead to:
 
@@ -19,7 +19,7 @@ This project uses historical hard drive health and SMART sensor data to predict 
 
 ---
 
-📊 Dataset
+##📊 Dataset
 
 Source: Backblaze Quarterly Hard Drive Stats
 Period: January – June 2020
@@ -32,9 +32,9 @@ The dataset contains daily observations of individual drives, including sensor r
 
 ---
 
-🔬 Approach
+##🔬 Approach
 
-1. Exploratory Data Analysis
+###1. Exploratory Data Analysis
 
 Analyzed failure patterns across:
 
@@ -44,7 +44,7 @@ Analyzed failure patterns across:
 - SMART health indicators
 - Failure frequency
 
-2. Feature Engineering
+###2. Feature Engineering
 
 Created features specifically designed for early failure detection:
 
@@ -53,7 +53,7 @@ Created features specifically designed for early failure detection:
 - Sensor trends and historical behavior
 - Time-based features
 
-3. Model Development
+###3. Model Development
 
 Compared multiple approaches:
 
@@ -62,13 +62,13 @@ Logistic Regression| Baseline classification model
 XGBoost| Main failure prediction model
 Cox Survival Analysis| Time-to-failure analysis
 
-4. Business-Aware Evaluation
+###4. Business-Aware Evaluation
 
 Instead of selecting a threshold solely based on model metrics, a cost-based threshold framework was developed.
 
 The final threshold selection was constrained by a minimum 60% recall requirement, ensuring that the model remains practical for proactive maintenance.
 
-5. Interactive Dashboard
+###5. Interactive Dashboard
 
 A Streamlit dashboard was developed to allow users to:
 
@@ -80,21 +80,17 @@ A Streamlit dashboard was developed to allow users to:
 
 ---
 
-🔍 Key Findings
+##🔍 Key Findings
 
-🌡️ Temperature and Failure Risk
+###🌡️ Temperature and Failure Risk
 
 Failure rates increased significantly at higher temperatures, with failure rates rising approximately 5× above 40°C.
 
-«📈 Temperature vs. Failure Rate Chart»
-
-💽 Drive Model Reliability
+###💽 Drive Model Reliability
 
 Failure rates varied considerably between drive models. One consumer-grade model experienced approximately 24× the failure rate of enterprise drives in the analyzed dataset.
 
-«📊 Failure Rate by Drive Model Chart»
-
-💰 Cost vs. Recall
+###💰 Cost vs. Recall
 
 Pure cost minimization selected an impractical threshold that resulted in only 11% recall.
 
@@ -102,7 +98,7 @@ Introducing a minimum 60% recall constraint produced a much more deployable solu
 
 ---
 
-📈 Model Results
+##📈 Model Results
 
 Model| ROC-AUC| Recall
 Logistic Regression (Baseline)| 0.57| 0%
@@ -113,7 +109,7 @@ The tuned XGBoost model provided the strongest overall discrimination between dr
 
 ---
 
-💵 Business Impact
+##💵 Business Impact
 
 At the 60% minimum recall requirement, the final model achieved:
 
@@ -125,7 +121,7 @@ This demonstrates why model deployment should consider business costs and operat
 
 ---
 
-🖥️ Dashboard
+##🖥️ Dashboard
 
 The project includes an interactive Streamlit dashboard for exploring drive failure risk and model performance.
 
@@ -135,7 +131,7 @@ streamlit run app/dashboard.py
 
 ---
 
-🛠️ Tech Stack
+##🛠️ Tech Stack
 
 Programming & Data
 
@@ -156,7 +152,7 @@ Visualization & Dashboard
 
 ---
 
-📂 Project Structure
+##📂 Project Structure
 
 Hard-Drive-Failure-Prediction/
 │
@@ -176,7 +172,7 @@ Hard-Drive-Failure-Prediction/
 
 ---
 
-🚀 Future Improvements
+##🚀 Future Improvements
 
 1. Longer Rolling Windows
 
@@ -208,7 +204,7 @@ Integrate the prediction system with data-center monitoring infrastructure to au
 
 ---
 
-🎯 Project Takeaway
+##🎯 Project Takeaway
 
 This project demonstrates an end-to-end approach to predictive maintenance, combining:
 
@@ -218,8 +214,8 @@ Rather than treating hard drive failure prediction as only a classification prob
 
 ---
 
-👩‍💻 Author
+##👩‍💻 Author
 
-Nuha Mushtaq, Tabassum Fathima, Yerra Shailaja
+###Nuha Mushtaq, Tabassum Fathima, Yerra Shailaja
 
-Built as a machine learning and predictive-maintenance project using real Backblaze hard drive data.
+###Built as a machine learning and predictive-maintenance project using real Backblaze hard drive data.
