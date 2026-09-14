@@ -157,11 +157,9 @@ Visualization & Dashboard
 ```text
 Hard-Drive-Failure-Prediction/
 │
-├── app/
-│   └── dashboard.py
+├── dashboard.py
 │
-├── notebooks/
-│   └── disc prediction project.ipynb
+├── disc prediction project.ipynb
 │
 ├── dashboard_data.csv
 ├── dashboard_metrics.json
